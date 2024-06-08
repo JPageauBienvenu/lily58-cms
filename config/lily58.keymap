@@ -46,6 +46,17 @@
         <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
     };
 
+    fr_a_gr: fr_a_gr {
+      label = "à";
+      wait-ms = <40>;
+      tap-ms = <40>;
+      bindings
+		  = <&macro_press   &kp LALT>
+	    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp KP_E &kp KP_N0> 
+		  , <&macro_release &kp LALT>
+	    ;
+    };
+
   };
 
     keymap {
