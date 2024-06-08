@@ -29,3 +29,39 @@ ZMK_UNICODE_SINGLE(fr_right_curl, N0, N0, N7, D) // Right Curly Bracket
 ZMK_UNICODE_SINGLE(fr_left_square, N0, N0, N5, B) // Left Square Bracket
 ZMK_UNICODE_SINGLE(fr_right_square, N0, N0, N5, D) // Right Square Bracket
 ZMK_UNICODE_SINGLE(fr_accent_cir, N0, N0, N5, E) // ^
+
+// ` to input
+ZMK_BEHAVIOR(AGRA, macro_two_param, bindings =
+    <&kp RA(LBKT)>,
+    <&macro_param_1to1>,
+    <&macro_tap &kp MACRO_PLACEHOLDER>,
+    <&macro_param_2to1>,
+    <&to MACRO_PLACEHOLDER>;
+)
+
+// ´ to input
+ZMK_BEHAVIOR(AIGU, macro_two_param, bindings =
+    <&kp RA(SLASH)>,
+    <&macro_param_1to1>,
+    <&macro_tap &kp MACRO_PLACEHOLDER>,
+    <&macro_param_2to1>,
+    <&to MACRO_PLACEHOLDER>;
+)
+
+// ¨ to input
+ZMK_BEHAVIOR(TREM, macro_two_param, bindings =
+    <&kp LS(LBKT)>,
+    <&macro_param_1to1>,
+    <&macro_tap &kp MACRO_PLACEHOLDER>,
+    <&macro_param_2to1>,
+    <&to MACRO_PLACEHOLDER>;
+)
+
+// ^ to input
+ZMK_BEHAVIOR(CIRC, macro_two_param, bindings = 
+    <&kp LBKT>,
+    <&macro_param_1to1>,
+    <&macro_tap &kp MACRO_PLACEHOLDER>,
+    <&macro_param_2to1>,
+    <&to MACRO_PLACEHOLDER>;
+)
