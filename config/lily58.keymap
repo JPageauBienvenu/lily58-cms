@@ -45,9 +45,9 @@
         <&macro_param_1to2>,
         <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
     };
-    as: fr_a_gr {
+    fr_a_gr: fr_a_gr {
       compatible = "zmk,behavior-macro";
-      label = "fr_a_gr";
+      label = "à";
       wait-ms = <40>;
       tap-ms = <40>;
       bindings 
