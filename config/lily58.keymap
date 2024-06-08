@@ -45,6 +45,15 @@
         <&macro_param_1to2>,
         <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
     };
+    as: fr_a_gr {
+      compatible = "zmk,behavior-macro";
+      label = "fr_a_gr";
+      wait-ms = <40>;
+      tap-ms = <40>;
+      bindings 
+      =  <&macro_tap     &kp KP_N0 &kp KP_N0 &kp KP_E &kp KP_N0> ;
+    };
+    
   };
 
     keymap {
