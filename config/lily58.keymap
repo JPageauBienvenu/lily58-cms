@@ -73,6 +73,13 @@
             label = "RIGHT_CHEVRON";
         };
 
+        pipe: pipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(GRAVE)>;
+            label = "PIPE";
+        };
+
         fr_a_gr: fr_a_gr {
             label = "à";
             wait-ms = <40>;
@@ -100,7 +107,7 @@
 &kp ESC           &as NUMBER_1  &as N2  &as N3    &as N4    &as N5                          &as N6  &as N7         &as N8           &as N9   &as N0     &kp BACKSPACE
 &kp TAB           &as Q         &as W   &as E     &as R     &as T                           &as Y   &as U          &as I            &as O    &as P      &mo 3
 &kp LEFT_SHIFT    &as A         &as S   &as D     &as F     &as G                           &as H   &as J          &as K            &as L    &as SEMI   &as SQT
-&kp LEFT_CONTROL  &as Z         &as X   &as C     &as V     &as B   &as MINUS    &as EQUAL  &as N   &as M          &as COMMA        &as DOT  &as GRAVE  &as BACKSLASH
+&kp LEFT_CONTROL  &as Z         &as X   &as C     &as V     &as B   &as MINUS    &as EQUAL  &as N   &as M          &as COMMA        &as DOT  &as GRAVE  &pipe
                                         &backtik  &kp LGUI  &mo 2   &kp SPACE    &kp RET    &mo 1   &kp RIGHT_ALT  &kp PRINTSCREEN
             >;
         };
@@ -118,7 +125,7 @@
 &trans  &kp F1         &kp F2  &kp F3             &kp F4    &kp F5                    &kp F6  &kp F7            &kp F8         &kp F9          &kp F10  &kp F11
 &trans  &trans         &trans  &as SLASH          &trans    &trans                    &trans  &trans            &trans         &trans          &trans   &kp F12
 &trans  &as BACKSLASH  &trans  &as SINGLE_QUOTE   &backtik  &trans                    &trans  &as LEFT_BRACKET  &trans         &trans          &trans   &trans
-&trans  &trans         &trans  &as RIGHT_BRACKET  &trans    &trans  &trans    &trans  &trans  &trans            &left_chevron  &right_chevron  &trans   &as PIPE
+&trans  &trans         &trans  &as RIGHT_BRACKET  &trans    &trans  &trans    &trans  &trans  &trans            &left_chevron  &right_chevron  &trans   &trans
                                &tilde             &trans    &trans  &trans    &trans  &trans  &trans            &trans
             >;
         };
@@ -136,7 +143,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans     &kp DEL
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans  &kp SLASH  &kp BACKSLASH
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans
             >;
         };
