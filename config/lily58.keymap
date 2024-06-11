@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTOSHIFT_HOLD_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             bindings = <&shifted>, <&kp>;
         };
     };
@@ -48,24 +48,14 @@
         backtik: backtik {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT &kp LEFT_BRACKET>,
-                <&macro_release>,
-                <&kp RIGHT_ALT>;
-
+            bindings = <&kp RA(LEFT_BRACKET)>;
             label = "BACKTIK";
         };
 
         tilde: tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT &kp RIGHT_BRACKET>,
-                <&macro_release>,
-                <&kp RIGHT_ALT>;
-
+            bindings = <&kp RA(RIGHT_BRACKET)>;
             label = "TILDE";
         };
 
